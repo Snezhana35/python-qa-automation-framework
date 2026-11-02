@@ -20,3 +20,6 @@ class BasePage:
 
     def is_visible(self, locator) -> bool:
         return locator.is_visible()
+
+    def wait_for_element(self, locator, state: str = "visible"):
+        locator.wait_for(state=state)
